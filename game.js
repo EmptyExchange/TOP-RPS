@@ -14,9 +14,13 @@ function getComputerChoice() {
     
 
 }
-let computerSelection = getComputerChoice();
+const computerSelection = getComputerChoice();
 
-let playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
+
+
+const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
+console.log(playerSelection)
+function playRound(playerSelection, computerSelection) {
 
 if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
     alert("Computer chose Paper! You Lose!");
@@ -28,3 +32,5 @@ else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Roc
 else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. You Win!");
 }
+}
+playRound();
