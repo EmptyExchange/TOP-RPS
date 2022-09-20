@@ -20,8 +20,9 @@ const computerSelection = getComputerChoice();
 
 const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
 console.log(playerSelection)
-function playRound(playerSelection, computerSelection) {
+function playRound() {
 
+    console.log(playerSelection)
 if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
     alert("Computer chose Paper! You Lose!");
     
