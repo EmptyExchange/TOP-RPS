@@ -14,17 +14,17 @@ function getComputerChoice() {
     
 
 }
-let computer = getComputerChoice();
+let computerSelection = getComputerChoice();
 
 let playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
 
-if (playerSelection.toLowerCase() === "rock" && (computer === "Paper")) {
+if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
     alert("Computer chose Paper! You Lose!");
     
 }
-else if (playerSelection.toLowerCase() === "rock" && (computer === "Rock")) {
+else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Rock")) {
     alert("Computer chose Rock! No winner!");
 }
-else if (playerSelection.toLowerCase() === "rock" && (computer === "Scissors")) {
+else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. You Win!");
 }
