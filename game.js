@@ -21,6 +21,7 @@ const computerSelection = getComputerChoice();
 const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
 console.log(playerSelection)
 function playRound() {
+    for (let i = 0; i <= 2; i++) {
 
     
 if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
@@ -53,6 +54,8 @@ else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === 
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. No Winner!");
 }
-
+    }
 }
 playRound();
+
+
