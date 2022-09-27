@@ -14,14 +14,17 @@ function getComputerChoice() {
     
 
 }
-const computerSelection = getComputerChoice();
 
 
 
-const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
-console.log(playerSelection)
+for (let i = 0; i <= 3; i++) {
+
+playRound();
+
 function playRound() {
-    for (let i = 0; i <= 2; i++) {
+    const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
+    
+const computerSelection = getComputerChoice();
 
     
 if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
@@ -33,6 +36,7 @@ else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Roc
 }
 else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. You Win!");
+    
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Paper")) {
     alert("Computer chose Paper! No Winner!");
@@ -40,12 +44,14 @@ else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Pa
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Rock")) {
     alert("Computer chose Rock! You Win!");
+  
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. You Lose!");
 }
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Paper")) {
     alert("Computer chose Paper! You Win!");
+   
     
 }
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Rock")) {
@@ -54,7 +60,9 @@ else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === 
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Scissors")) {
     alert("Computer chose Scissors. No Winner!");
 }
-    }
+  else  {
+    alert("Invalid entry, try again.")
+  }}
 }
 playRound();
 
