@@ -14,12 +14,16 @@ function getComputerChoice() {
     
 
 }
+const win = "You Win!";
+const lose = "You Lose!";
+const tie = "No Winner!";
 
 
 
-for (let i = 0; i <= 3; i++) {
+for (let i = 0; i <= 4; i++) {
 
 playRound();
+}
 
 function playRound() {
     const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
@@ -28,42 +32,42 @@ const computerSelection = getComputerChoice();
 
     
 if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
-    alert("Computer chose Paper! You Lose!");
+    alert('Computer chose Paper! ' + lose);
     
 }
 else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! No Winner!");
+    alert("Computer chose Rock! " + tie);
 }
 else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. You Win!");
+    alert("Computer chose Scissors. " + win);
     
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Paper")) {
-    alert("Computer chose Paper! No Winner!");
+    alert("Computer chose Paper! " + tie);
     
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! You Win!");
+    alert("Computer chose Rock! " + win);
   
 }
 else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. You Lose!");
+    alert("Computer chose Scissors. " + lose);
 }
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Paper")) {
-    alert("Computer chose Paper! You Win!");
+    alert("Computer chose Paper! " + win);
    
     
 }
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! You Lose!");
+    alert("Computer chose Rock! " + lose);
 }
 else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. No Winner!");
+    alert("Computer chose Scissors. " + tie);
 }
   else  {
     alert("Invalid entry, try again.")
   }}
-}
-playRound();
+
+
 
 
