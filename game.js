@@ -1,7 +1,7 @@
 console.log("hello")
 function getComputerChoice() {
     const picked = Math.random()* 6 + 1;
-    console.log(picked)
+    
     if (picked <= 2) {
         return ("Rock");
     }
@@ -20,54 +20,68 @@ const tie = "No Winner!";
 
 
 
-for (let i = 0; i <= 4; i++) {
 
-playRound();
-}
+
+
 
 function playRound() {
     const playerSelection = prompt("Choose your weapon, Rock, Paper, or Scissors");
     
-const computerSelection = getComputerChoice();
+    const computerSelection = getComputerChoice();
+    
 
     
-if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
-    alert('Computer chose Paper! ' + lose);
+        if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Paper")) {
+            alert('Computer chose Paper! ' + lose);
+            return lose;
     
-}
-else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! " + tie);
-}
-else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. " + win);
+         }
+        else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Rock")){
+            alert("Computer chose Rock! " + tie);
+            return tie;
+        }
+        else if (playerSelection.toLowerCase() === "rock" && (computerSelection === "Scissors")) {
+            alert("Computer chose Scissors. " + win);
+            return win;
     
-}
-else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Paper")) {
-    alert("Computer chose Paper! " + tie);
+        }
+        else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Paper")) {
+            alert("Computer chose Paper! " + tie);
+            return tie;
     
-}
-else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! " + win);
+        }
+        else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Rock")) {
+            alert("Computer chose Rock! " + win);
+            return win;
   
-}
-else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. " + lose);
-}
-else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Paper")) {
-    alert("Computer chose Paper! " + win);
+        }
+        else if (playerSelection.toLowerCase() === "paper" && (computerSelection === "Scissors")) {
+            alert("Computer chose Scissors. " + lose);
+            return lose;
+        }
+        else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Paper")) {
+            alert("Computer chose Paper! " + win);
+            return win;
    
-    
+        }
+        else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Rock")) {
+            alert("Computer chose Rock! " + lose);
+            return lose;
+        }
+        else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Scissors")) {
+            alert("Computer chose Scissors. " + tie);
+            return tie;
+        }
+        else  {
+            alert("Invalid entry, try again.")
+        }
+   
 }
-else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Rock")) {
-    alert("Computer chose Rock! " + lose);
+console.log(playRound());
+
+function wins() {
+    if playRound() === win {
+        console.log("this working?")
+    }
 }
-else if (playerSelection.toLowerCase() === "scissors" && (computerSelection === "Scissors")) {
-    alert("Computer chose Scissors. " + tie);
-}
-  else  {
-    alert("Invalid entry, try again.")
-  }}
-
-
-
 
