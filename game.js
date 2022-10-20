@@ -1,7 +1,7 @@
 console.log("hello")
 function getComputerChoice() {
-    const picked = Math.random()* 6 + 1;
-    
+    const picked = Math.floor(Math.random()*6 +1);
+    console.log(picked)
     if (picked <= 2) {
         return ("rock");
     }
@@ -29,7 +29,7 @@ const playerSelection = prompt('Choose your weapon').toLowerCase();
 console.log(computerSelection)
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
     
     console.log(computerSelection)
     console.log(playerSelection)
