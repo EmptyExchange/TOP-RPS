@@ -1,7 +1,7 @@
 console.log("hello")
 function getComputerChoice() {
     const picked = Math.floor(Math.random()*6 +1);
-    console.log(picked)
+
     if (picked <= 2) {
         return ("rock");
     }
@@ -14,7 +14,7 @@ function getComputerChoice() {
     
 
 }
-console.log(getComputerChoice())
+
 const win = "You Win!";
 const lose = "You Lose!";
 const tie = "No Winner!";
@@ -23,14 +23,14 @@ let computerScore = 0
 let roundWinner= ''
 
 
-const computerSelection = getComputerChoice();
-const playerSelection = prompt('Choose your weapon').toLowerCase();
 
-console.log(computerSelection)
+
+
 
 
 function playRound() {
-    
+    const computerSelection = getComputerChoice();
+const playerSelection = prompt('Choose your weapon').toLowerCase();
     console.log(computerSelection)
     console.log(playerSelection)
 
@@ -49,7 +49,9 @@ function playRound() {
     }        
 
 }
-playRound()
+for ( let i = 0; i < 5; i++) {
+    playRound();
+}
 console.log(playerScore)
 console.log(computerScore)
 console.log(roundWinner)
