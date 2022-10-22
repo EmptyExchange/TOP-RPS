@@ -56,10 +56,10 @@ function game() {
     for ( let i = 0; i < 5; i++) {
         playRound();
     }
-    if (roundWinner === 'Tie!'){
+    if (playerScore === computerScore){
         alert("The game was a draw! No Winner!")
     }
-    else if (roundWinner === 'You Win!'){
+    else if (playerScore > computerScore){
         alert("You did it! You Win!")
     }
     else {
