@@ -49,9 +49,25 @@ const playerSelection = prompt('Choose your weapon').toLowerCase();
     }        
 
 }
-for ( let i = 0; i < 5; i++) {
-    playRound();
+
+
+
+function game() {
+    for ( let i = 0; i < 5; i++) {
+        playRound();
+    }
+    if (roundWinner === 'Tie!'){
+        alert("The game was a draw! No Winner!")
+    }
+    else if (roundWinner === 'You Win!'){
+        alert("You did it! You Win!")
+    }
+    else {
+        alert("You failed! Computer wins!")
+    }
 }
+
+game();
 console.log(playerScore)
 console.log(computerScore)
 console.log(roundWinner)
