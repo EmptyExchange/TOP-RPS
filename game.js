@@ -57,22 +57,4 @@ function playRound() {
 
 
 
-function game() {
-    for ( let i = 0; i < 5; i++) {
-        playRound();
-    }
-    if (playerScore === computerScore){
-        alert("The game was a draw! No Winner!")
-    }
-    else if (playerScore > computerScore){
-        alert("You did it! You Win!")
-    }
-    else {
-        alert("You failed! Computer wins!")
-    }
-}
 
-game();
-console.log(playerScore)
-console.log(computerScore)
-console.log(roundWinner)
