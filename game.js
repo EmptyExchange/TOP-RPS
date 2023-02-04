@@ -22,7 +22,7 @@ let playerScore = 0
 let computerScore = 0
 let roundWinner= ''
 
-alert("5 games will be played. Will you be victorious?") 
+
 
 
 
@@ -35,7 +35,7 @@ function playRound() {
     console.log(computerSelection)
     console.log(playerSelection)
     if (playerSelection === '') {
-        alert("COWARD! CHOOSE A WEAPON! FIGHT!")
+        
     }
 
     if (playerSelection === computerSelection) {
@@ -51,7 +51,7 @@ function playRound() {
         computerScore++
         roundWinner = 'Computer Wins!'
     }   
-    alert(roundWinner)     
+        
 
 }
 
