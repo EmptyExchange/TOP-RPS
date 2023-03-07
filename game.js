@@ -3,13 +3,13 @@ function getComputerChoice() {
     const picked = Math.floor(Math.random()*6 +1);
 
     if (picked <= 2) {
-        return ("rock");
+        return ("shield");
     }
     else if (picked >= 5) {
-        return ("paper");
+        return ("axe");
     }
     else {
-        return ("scissors");
+        return ("sword");
     }
     
 
@@ -22,14 +22,14 @@ let playerScore = 0
 let computerScore = 0
 let roundWinner= ''
 
-document.getElementById("rock").onclick = function() {
-   playRound("rock");
+document.getElementById("shield").onclick = function() {
+   playRound("shield");
 }
-document.getElementById("scissors").onclick = function() {
-    playRound("scissors");
+document.getElementById("sword").onclick = function() {
+    playRound("sword");
 }
-document.getElementById("paper").onclick = function() {
-    playRound("paper");
+document.getElementById("axe").onclick = function() {
+    playRound("axe");
 }
 
 
@@ -37,14 +37,14 @@ document.getElementById("paper").onclick = function() {
 function playRound(playerSelection) {
    
     const computerSelection = getComputerChoice();
-    alert("played round")
+    
 console.log(computerSelection)
     if (playerSelection === computerSelection) {
         roundWinner = 'Tie!'
     }
-    else if ((playerSelection === 'rock' && computerSelection === 'scissors') || 
-            (playerSelection === 'paper' && computerSelection === 'rock') ||
-            (playerSelection === 'scissors' && computerSelection === 'paper')){
+    else if ((playerSelection === 'shield' && computerSelection === 'sword') || 
+            (playerSelection === 'axe' && computerSelection === 'shield') ||
+            (playerSelection === 'sword' && computerSelection === 'axe')){
                 playerScore++
                 roundWinner = 'You Win!'
             }
