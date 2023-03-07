@@ -22,22 +22,23 @@ let playerScore = 0
 let computerScore = 0
 let roundWinner= ''
 
-alert("5 games will be played. Will you be victorious?") 
+document.getElementById("rock").onclick = function() {
+   playRound("rock");
+}
+document.getElementById("scissors").onclick = function() {
+    playRound("scissors");
+}
+document.getElementById("paper").onclick = function() {
+    playRound("paper");
+}
 
 
 
-
-
-function playRound() {
+function playRound(playerSelection) {
    
     const computerSelection = getComputerChoice();
-    const playerSelection = prompt('Choose your weapon').toLowerCase();
-    console.log(computerSelection)
-    console.log(playerSelection)
-    if (playerSelection === '') {
-        alert("COWARD! CHOOSE A WEAPON! FIGHT!")
-    }
-
+    alert("played round")
+console.log(computerSelection)
     if (playerSelection === computerSelection) {
         roundWinner = 'Tie!'
     }
@@ -57,22 +58,10 @@ function playRound() {
 
 
 
-function game() {
-    for ( let i = 0; i < 5; i++) {
-        playRound();
-    }
-    if (playerScore === computerScore){
-        alert("The game was a draw! No Winner!")
-    }
-    else if (playerScore > computerScore){
-        alert("You did it! You Win!")
-    }
-    else {
-        alert("You failed! Computer wins!")
-    }
-}
 
-game();
+
+
+
 console.log(playerScore)
 console.log(computerScore)
 console.log(roundWinner)
