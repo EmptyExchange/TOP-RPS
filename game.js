@@ -40,19 +40,28 @@ function playRound(playerSelection) {
     
 console.log(computerSelection)
     if (playerSelection === computerSelection) {
-        roundWinner = 'Tie!'
+        roundWinner = 'tie'
     }
     else if ((playerSelection === 'shield' && computerSelection === 'sword') || 
             (playerSelection === 'axe' && computerSelection === 'shield') ||
             (playerSelection === 'sword' && computerSelection === 'axe')){
                 playerScore++
-                roundWinner = 'You Win!'
+                roundWinner = 'win'
             }
     else {
         computerScore++
-        roundWinner = 'Computer Wins!'
+        roundWinner = 'lose'
     }   
-    alert(roundWinner)     
+    if (computerSelection === 'sword' && roundWinner === 'lose') {
+        alert("The enemy easily dodges your slow axe and slashes you! ")
+    }   
+    if (computerSelection === 'shield' && roundWinner === 'lose') {
+        alert("Your sword bounces harmlessly off the enemy shield as he bashes you in the face")
+        
+    }
+    if (computerSelection === 'axe' && roundWinner === 'lose') {
+        alert("The enemy axe smashes through your shield!")
+    }
 
 }
 
