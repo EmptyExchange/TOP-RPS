@@ -62,6 +62,24 @@ console.log(computerSelection)
     if (computerSelection === 'axe' && roundWinner === 'lose') {
         alert("The enemy axe smashes through your shield!")
     }
+    if (computerSelection === 'sword' && roundWinner === 'tie') {
+        alert("Your swords bounce harmlessly off each other")
+    }
+    if (computerSelection === 'shield' && roundWinner === 'tie') {
+        alert("Your shields bounce harmlessly off each other")
+    }
+    if (computerSelection === 'axe' && roundWinner === 'tie'){
+        alert("Your axes bounce harmlessly off each other")
+    }
+    if (computerSelection === 'sword' && roundWinner === 'win'){
+        alert("You easily deflect the enemies sword and bash him with your shield")
+    }
+    if (computerSelection === 'shield' && roundWinner === 'win'){
+        alert("Your axe smashes though the enemy shield and continues into his body")
+    }
+    if (computerSelection === 'axe' && roundWinner === 'win'){
+        alert("You dodge the enemy axe and slice him with your sword")
+    }
 
 }
 
