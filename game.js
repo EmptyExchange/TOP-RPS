@@ -20,6 +20,7 @@ const lose = "You Lose!";
 const tie = "No Winner!";
 let playerScore = 0
 let computerScore = 0
+let tieScore = 0
 let roundWinner= ''
 
 document.getElementById("shield").onclick = function() {
@@ -35,7 +36,11 @@ document.getElementById("axe").onclick = function() {
 
 
 function playRound(playerSelection) {
-   
+    for (let i = 0; i < 50; i++) {
+       
+        if (computerScore === 3 || playerScore === 3) {
+            break;
+        }
     const computerSelection = getComputerChoice();
     
 console.log(computerSelection)
@@ -45,7 +50,7 @@ console.log(computerSelection)
     else if ((playerSelection === 'shield' && computerSelection === 'sword') || 
             (playerSelection === 'axe' && computerSelection === 'shield') ||
             (playerSelection === 'sword' && computerSelection === 'axe')){
-                playerScore++
+               playerScore++
                 roundWinner = 'win'
             }
     else {
@@ -80,12 +85,12 @@ console.log(computerSelection)
     if (computerSelection === 'axe' && roundWinner === 'win'){
         alert("You dodge the enemy axe and slice him with your sword")
     }
-
+    console.log(roundWinner)
+}
 }
 
 
-
-
+    
 
 
 
