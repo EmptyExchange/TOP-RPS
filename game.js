@@ -36,15 +36,13 @@ document.getElementById("axe").onclick = function() {
 
 
 function playRound(playerSelection) {
-    for (let i = 0; i < 50; i++) {
-       
-        if (computerScore === 3 || playerScore === 3) {
-            break;
-        }
+    
+   
     const computerSelection = getComputerChoice();
     
 console.log(computerSelection)
     if (playerSelection === computerSelection) {
+        tieScore ++;
         roundWinner = 'tie'
     }
     else if ((playerSelection === 'shield' && computerSelection === 'sword') || 
@@ -85,15 +83,22 @@ console.log(computerSelection)
     if (computerSelection === 'axe' && roundWinner === 'win'){
         alert("You dodge the enemy axe and slice him with your sword")
     }
-    console.log(roundWinner)
+   if (playerScore === 5) {
+        alert("You win")
+        buttonDirector();
+        
+   }
+   if (computerScore === 5) {
+        alert("You lose")
+        buttonDirector();
+   }
 }
-}
+
+function buttonDirector() {
+    
+        document.getElementById("restartButton").innerHTML = '<button onclick="window.location.reload()">Would you like to battle again?</button>';
+   }
 
 
     
 
-
-
-console.log(playerScore)
-console.log(computerScore)
-console.log(roundWinner)
