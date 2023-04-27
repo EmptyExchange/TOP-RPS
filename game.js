@@ -23,17 +23,17 @@ let computerScore = 0
 let tieScore = 0
 let roundWinner= ''
 
-document.getElementById("shield").onclick = function() {
-   playRound("shield");
-}
+
+
 document.getElementById("sword").onclick = function() {
     playRound("sword");
 }
 document.getElementById("axe").onclick = function() {
     playRound("axe");
 }
-
-
+document.getElementById("shield").onclick = function() {
+    playRound("shield");
+}
 
 function playRound(playerSelection) {
     
@@ -98,7 +98,3 @@ function buttonDirector() {
     
         document.getElementById("restartButton").innerHTML = '<button onclick="window.location.reload()">Would you like to battle again?</button>';
    }
-
-
-    
-

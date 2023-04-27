@@ -5,3 +5,18 @@ body {
   -o-background-size: cover;
   background-size: cover;
   }
+
+  #shield img {
+    width: 200px;
+    height: 200px;
+  }
+   
+  #sword img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #axe img {
+    width: 200px;
+    height: 200px;
+  }
