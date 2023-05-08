@@ -31,22 +31,34 @@ body {
    padding-right: 100px;
    
   }
-  .container {
+  #axeWin {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .btn {
-    padding: 10px 60px;
+  .closebtn {
+    padding: 10px 20px;
     background: black;
     color: red;
     border: 0;
     outline: none;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     border-radius: 30px;
+
+  }
+  .displayBox {
+    display: flex;
+    background: blue;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border-style: groove;
+    border-color: black;
+    
+
 
   }
