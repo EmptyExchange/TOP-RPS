@@ -96,5 +96,5 @@ console.log(computerSelection)
 
 function buttonDirector() {
     
-        document.getElementById("restartButton").innerHTML = '<button onclick="window.location.reload()">Would you like to battle again?</button>';
+        document.getElementById("restartButton").innerHTML = '<button onclick="window.location.reload()">Retry?</button>';
    }

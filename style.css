@@ -38,8 +38,7 @@ body {
     background: black;
     color: red;
     border: 0;
-    outline: none;
-    
+    outline: none;    
     font-size: 18px;
     font-weight: 500;
     border-radius: 30px;
@@ -49,5 +48,18 @@ body {
 
   .closebtn {
     cursor: pointer;
+  }
+
+  #restartButton {
+    padding: 10px 20px;
+    background: black;
+    color: red;
+    border: 0;
+    outline: none;    
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    justify-content: right;
+
   }
   
