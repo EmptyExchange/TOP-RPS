@@ -48,11 +48,10 @@ body {
 
   #axeWin {
     display: none;
+    
   }
 
-  .closebtn {
-    cursor: pointer;
-  }
+ 
 
   #restartButton {
     padding: 10px 20px;

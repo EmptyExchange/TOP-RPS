@@ -97,4 +97,6 @@ console.log(computerSelection)
 
 function winnerAxe() {
     document.getElementById("axeWin").style.display = "block";
+    
 }
+
