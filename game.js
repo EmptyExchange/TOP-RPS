@@ -81,20 +81,23 @@ console.log(computerSelection)
         alert("Your axe smashes though the enemy shield and continues into his body")
     }
     if (computerSelection === 'axe' && roundWinner === 'win'){
-        alert("You dodge the enemy axe and slice him with your sword")
+        winnerAxe();
     }
    if (playerScore === 5) {
         alert("You win")
-        buttonDirector();
+       ;
         
    }
    if (computerScore === 5) {
         alert("You lose")
-        buttonDirector();
+       ;
    }
 }
 
-function buttonDirector() {
+function winnerAxe() {
     
-        document.getElementById("restartButton").innerHTML = '<button onclick="window.location.reload()">Retry?</button>';
-   }
+    let display = getComputedStyle(axeWin).display
+    if (display == 'none') {
+    document.getElementById(axeWin).style.display = "block";
+    }
+}
