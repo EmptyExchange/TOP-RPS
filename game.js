@@ -94,10 +94,7 @@ console.log(computerSelection)
    }
 }
 
+
 function winnerAxe() {
-    
-    let display = getComputedStyle(axeWin).display
-    if (display == 'none') {
-    document.getElementById(axeWin).style.display = "block";
-    }
+    document.getElementById("axeWin").style.display = "block";
 }
