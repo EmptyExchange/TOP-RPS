@@ -34,6 +34,9 @@ document.getElementById("axe").onclick = function() {
 document.getElementById("shield").onclick = function() {
     playRound("shield");
 }
+document.getElementsByClassName("closebtn").onclick = function() {
+    document.getElementById("axeWin").style.display = "none";
+   }
 
 function playRound(playerSelection) {
     
@@ -97,6 +100,15 @@ console.log(computerSelection)
 
 function winnerAxe() {
     document.getElementById("axeWin").style.display = "block";
+  
     
 }
 
+function hide() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
