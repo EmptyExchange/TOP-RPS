@@ -35,8 +35,8 @@ document.getElementById("axe").onclick = function() {
 document.getElementById("shield").onclick = function() {
     playRound("shield");
 }
-document.getElementById("closeAxe").onclick = function() {
-    hideAxe();
+document.getElementById("closeSwordWin").onclick = function() {
+    hideSwordWin();
 }
 
 
@@ -86,7 +86,7 @@ console.log(computerSelection)
         alert("Your axe smashes though the enemy shield and continues into his body")
     }
     if (computerSelection === 'axe' && roundWinner === 'win'){
-       toggleAxe();
+       toggleSwordWin();
        
     }
    if (playerScore === 5) {
@@ -100,18 +100,16 @@ console.log(computerSelection)
    }
 }
 
-function toggleAxe() {
-    var div = document.getElementById("axeWin");
-    var closer = document.getElementById("closeAxe");
-   
+function toggleSwordWin() {
+    var div = document.getElementById("swordWin");    
+    var closer = document.getElementById("closeSwordWin");   
     div.style.display = "block";
-    
     closer.style.display = "inline";
 }
 
-function hideAxe() {
-    var hide = document.getElementById("closeAxe");
-    var stillHide = document.getElementById("axeWin");
+function hideSwordWin() {
+    var hide = document.getElementById("closeSwordWin");
+    var stillHide = document.getElementById("swordWin");
     stillHide.style.display = "none";
     hide.style.display = "none"
 }
