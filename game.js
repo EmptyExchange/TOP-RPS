@@ -41,7 +41,9 @@ document.getElementById("closeSwordWin").onclick = function() {
 document.getElementById("closeSwordLose").onclick = function() {
     hideSwordLose();
 }
-
+document.getElementById("closeSwordTie").onclick = function() {
+    hideSwordTie()
+}
 
 function playRound(playerSelection) {
     
@@ -67,14 +69,14 @@ console.log(computerSelection)
         alert("The enemy easily dodges your slow axe and slashes you! ")
     }   
     if (computerSelection === 'shield' && roundWinner === 'lose') {
-        toggleSwordLose()
+        toggleSwordLose();
         
     }
     if (computerSelection === 'axe' && roundWinner === 'lose') {
         alert("The enemy axe smashes through your shield!")
     }
     if (computerSelection === 'sword' && roundWinner === 'tie') {
-        alert("Your swords bounce harmlessly off each other")
+        toggleSwordTie();
     }
     if (computerSelection === 'shield' && roundWinner === 'tie') {
         alert("Your shields bounce harmlessly off each other")
@@ -125,6 +127,18 @@ function toggleSwordLose() {
 function hideSwordLose() {
     var hide = document.getElementById("closeSwordLose");
     var stillHide = document.getElementById("swordLose");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function toggleSwordTie() {
+    var div = document.getElementById("swordTie");    
+    var closer = document.getElementById("closeSwordTie");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideSwordTie() {
+    var hide = document.getElementById("closeSwordTie");
+    var stillHide = document.getElementById("swordTie");
     stillHide.style.display = "none";
     hide.style.display = "none"
 }
