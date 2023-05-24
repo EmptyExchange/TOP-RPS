@@ -53,7 +53,15 @@ document.getElementById("closeAxeTie").onclick = function() {
 document.getElementById("closeAxeWin").onclick = function() {
     hideAxeWin();
 }
-
+document.getElementById("closeShieldWin").onclick = function() {
+    hideShieldWin();
+}
+document.getElementById("closeShieldLose").onclick = function() {
+    hideShieldLose();
+}
+document.getElementById("closeShieldTie").onclick = function() {
+    hideShieldTie();
+}
 function playRound(playerSelection) {
     
    
@@ -82,19 +90,19 @@ console.log(computerSelection)
         
     }
     if (computerSelection === 'axe' && roundWinner === 'lose') {
-        alert("The enemy axe smashes through your shield!")
+        toggleShieldLose();
     }
     if (computerSelection === 'sword' && roundWinner === 'tie') {
         toggleSwordTie();
     }
     if (computerSelection === 'shield' && roundWinner === 'tie') {
-        alert("Your shields bounce harmlessly off each other")
+        toggleShieldTie();
     }
     if (computerSelection === 'axe' && roundWinner === 'tie'){
         toggleAxeTie();
     }
     if (computerSelection === 'sword' && roundWinner === 'win'){
-        alert("You easily deflect the enemies sword and bash him with your shield")
+        toggleShieldWin();
     }
     if (computerSelection === 'shield' && roundWinner === 'win'){
         toggleAxeWin();
@@ -184,6 +192,42 @@ function toggleAxeWin() {
 function hideAxeWin() {
     var hide = document.getElementById("closeAxeWin");
     var stillHide = document.getElementById("axeWin");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function toggleShieldWin() {
+    var div = document.getElementById("shieldWin");    
+    var closer = document.getElementById("closeShieldWin");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function toggleShieldLose() {
+    var div = document.getElementById("shieldLose");    
+    var closer = document.getElementById("closeShieldLose");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function toggleShieldTie() {
+    var div = document.getElementById("shieldTie");    
+    var closer = document.getElementById("closeShieldTie");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideShieldWin() {
+    var hide = document.getElementById("closeShieldWin");
+    var stillHide = document.getElementById("shieldWin");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function hideShieldLose() {
+    var hide = document.getElementById("closeShieldLose");
+    var stillHide = document.getElementById("shieldLose");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function hideShieldTie() {
+    var hide = document.getElementById("closeShieldTie");
+    var stillHide = document.getElementById("shieldTie");
     stillHide.style.display = "none";
     hide.style.display = "none"
 }
