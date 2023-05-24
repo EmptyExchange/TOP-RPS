@@ -33,7 +33,7 @@ body {
   }
  
   
-  #swordWin, #closeSwordWin, #swordLose, #closeSwordLose, #swordTie, #closeSwordTie {
+  #swordWin, #closeSwordWin, #swordLose, #closeSwordLose, #swordTie, #closeSwordTie, #axeLose, #closeAxeLose {
     padding: 10px 20px;
     background: black;
     color: red;
@@ -70,7 +70,7 @@ body {
 
   }
   
-  #closeSwordWin, #closeSwordLose, #closeSwordTie {
+  #closeSwordWin, #closeSwordLose, #closeSwordTie, #closeAxeLose {
     cursor: pointer;
    
     

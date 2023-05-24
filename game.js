@@ -44,6 +44,9 @@ document.getElementById("closeSwordLose").onclick = function() {
 document.getElementById("closeSwordTie").onclick = function() {
     hideSwordTie()
 }
+document.getElementById("closeAxeLose").onclick = function() {
+    hideAxeLose();
+}
 
 function playRound(playerSelection) {
     
@@ -66,7 +69,7 @@ console.log(computerSelection)
         roundWinner = 'lose'
     }   
     if (computerSelection === 'sword' && roundWinner === 'lose') {
-        alert("The enemy easily dodges your slow axe and slashes you! ")
+        toggleAxeLose();
     }   
     if (computerSelection === 'shield' && roundWinner === 'lose') {
         toggleSwordLose();
@@ -139,6 +142,18 @@ function toggleSwordTie() {
 function hideSwordTie() {
     var hide = document.getElementById("closeSwordTie");
     var stillHide = document.getElementById("swordTie");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function toggleAxeLose() {
+    var div = document.getElementById("axeLose");    
+    var closer = document.getElementById("closeAxeLose");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideAxeLose() {
+    var hide = document.getElementById("closeAxeLose");
+    var stillHide = document.getElementById("axeLose");
     stillHide.style.display = "none";
     hide.style.display = "none"
 }
