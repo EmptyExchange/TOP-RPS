@@ -47,6 +47,12 @@ document.getElementById("closeSwordTie").onclick = function() {
 document.getElementById("closeAxeLose").onclick = function() {
     hideAxeLose();
 }
+document.getElementById("closeAxeTie").onclick = function() {
+    hideAxeTie();
+}
+document.getElementById("closeAxeWin").onclick = function() {
+    hideAxeWin();
+}
 
 function playRound(playerSelection) {
     
@@ -85,13 +91,13 @@ console.log(computerSelection)
         alert("Your shields bounce harmlessly off each other")
     }
     if (computerSelection === 'axe' && roundWinner === 'tie'){
-        alert("Your axes bounce harmlessly off each other")
+        toggleAxeTie();
     }
     if (computerSelection === 'sword' && roundWinner === 'win'){
         alert("You easily deflect the enemies sword and bash him with your shield")
     }
     if (computerSelection === 'shield' && roundWinner === 'win'){
-        alert("Your axe smashes though the enemy shield and continues into his body")
+        toggleAxeWin();
     }
     if (computerSelection === 'axe' && roundWinner === 'win'){
        toggleSwordWin();
@@ -154,6 +160,30 @@ function toggleAxeLose() {
 function hideAxeLose() {
     var hide = document.getElementById("closeAxeLose");
     var stillHide = document.getElementById("axeLose");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function toggleAxeTie() {
+    var div = document.getElementById("axeTie");    
+    var closer = document.getElementById("closeAxeTie");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideAxeTie() {
+    var hide = document.getElementById("closeAxeTie");
+    var stillHide = document.getElementById("axeTie");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
+}
+function toggleAxeWin() {
+    var div = document.getElementById("axeWin");    
+    var closer = document.getElementById("closeAxeWin");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideAxeWin() {
+    var hide = document.getElementById("closeAxeWin");
+    var stillHide = document.getElementById("axeWin");
     stillHide.style.display = "none";
     hide.style.display = "none"
 }
