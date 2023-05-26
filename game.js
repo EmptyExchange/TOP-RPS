@@ -65,6 +65,12 @@ document.getElementById("closeShieldTie").onclick = function() {
 document.getElementById("winnerClose").onclick = function() {
     window.location.reload();
 }
+document.getElementById("loserClose").onclick = function() {
+    window.location.reload();
+}
+document.getElementById("start").onclick = function() {
+    hideOpener();
+}
 
 function playRound(playerSelection) {
     
@@ -120,7 +126,7 @@ console.log(computerSelection)
         
    }
    if (computerScore === 5) {
-        alert("You lose")
+        gameLoser();
        ;
    }
 }
@@ -239,4 +245,16 @@ function gameWinner() {
     var closer = document.getElementById("winnerClose");   
     div.style.display = "block";
     closer.style.display = "inline";
+}
+function gameLoser() {
+    var div = document.getElementById("loser");    
+    var closer = document.getElementById("loserClose");   
+    div.style.display = "block";
+    closer.style.display = "inline";
+}
+function hideOpener() {
+    var hide = document.getElementById("opener");
+    var stillHide = document.getElementById("start");
+    stillHide.style.display = "none";
+    hide.style.display = "none"
 }
