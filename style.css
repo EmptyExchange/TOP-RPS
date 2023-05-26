@@ -57,23 +57,28 @@ body {
 
  
 
-  #restartButton {
+  #winnerClose {
+    
+  }
+  
+  #closeSwordWin, #closeSwordLose, #closeSwordTie, #closeAxeLose, #closeAxeTie, #closeAxeWin, #closeShieldWin,
+  #closeShieldLose, #closeShieldTie, #winnerClose {
+    cursor: pointer;
+   
+    
+  }
+
+  #winner {
     padding: 10px 20px;
-    background: black;
-    color: red;
+    background: goldenrod;
+    color: blue;
     border: 0;
     outline: none;    
-    font-size: 18px;
+    font-size: 80px;
     font-weight: 500;
     border-radius: 30px;
     justify-content: right;
     display: none;
-
-  }
-  
-  #closeSwordWin, #closeSwordLose, #closeSwordTie, #closeAxeLose, #closeAxeTie, #closeAxeWin, #closeShieldWin,
-  #closeShieldLose, #closeShieldTie {
-    cursor: pointer;
-   
-    
+    align-items: center;
+    text-align: center;
   }
