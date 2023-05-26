@@ -62,6 +62,10 @@ document.getElementById("closeShieldLose").onclick = function() {
 document.getElementById("closeShieldTie").onclick = function() {
     hideShieldTie();
 }
+document.getElementById("winnerClose").onclick = function() {
+    window.location.reload();
+}
+
 function playRound(playerSelection) {
     
    
@@ -112,8 +116,7 @@ console.log(computerSelection)
        
     }
    if (playerScore === 5) {
-        alert("You win")
-       ;
+        gameWinner();
         
    }
    if (computerScore === 5) {
@@ -230,4 +233,10 @@ function hideShieldTie() {
     var stillHide = document.getElementById("shieldTie");
     stillHide.style.display = "none";
     hide.style.display = "none"
+}
+function gameWinner() {
+    var div = document.getElementById("winner");    
+    var closer = document.getElementById("winnerClose");   
+    div.style.display = "block";
+    closer.style.display = "inline";
 }
